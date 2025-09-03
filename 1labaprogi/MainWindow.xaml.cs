@@ -19,6 +19,6 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        string a = "hello world";
+        Person stud1 = new Person(22, "Сергей", "Петрович", 178);
     }
 }
