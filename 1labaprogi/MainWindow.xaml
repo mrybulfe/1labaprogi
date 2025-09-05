@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_1labaprogi"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="800">
     <Grid>
-        <Canvas x:Name="Scene" HorizontalAlignment="Left" Height="400" Margin="15,0,0,0" VerticalAlignment="Center" Width="600" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125"/>
+            <RowDefinition Height="125"/>
+            <RowDefinition/>
+            </Grid.RowDefinitions>
+        <StackPanel  Grid.Row="0" Orientation="Horizontal">
+            <Button x:Name="CreateTriangle" Content="Произвольный треугольник" FontSize="13" Height="125" Width="200" Click="CreateTriangle_Click"/>
+            <Button Content="Произвольный прямоугольник" FontSize="13" Height="125" Width="200" />
+            <Button Content="Квадрат" FontSize="13" Height="125" Width="200" />
+            <Button x:Name="ClearBordButton" Content="Отчистить доску" FontSize="13" Height="125" Width="200" Click="ClearBordButton_Click"/>
+        </StackPanel>
+                <Canvas x:Name="Scene" HorizontalAlignment="Left" Height="400" Margin="15,450,0,0" VerticalAlignment="Center" Width="770" />
     </Grid>
 </Window>

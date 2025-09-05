@@ -22,11 +22,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        Point2d p1 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
-        Point2d p2 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
-        Point2d p3 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
-        tr = new Triangle(p1, p2, p3);
-        DrawTriangle(tr);
+        
     }
     public void DrawLine(Point2d p1, Point2d p2)
     {
@@ -51,5 +47,19 @@ public partial class MainWindow : Window
     public void ClearScene()
     {
         Scene.Children.Clear();
+    }
+
+    private void ClearBordButton_Click(object sender, RoutedEventArgs e)
+    {
+        ClearScene();
+    }
+
+    private void CreateTriangle_Click(object sender, RoutedEventArgs e)
+    {
+        Point2d p1 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
+        Point2d p2 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
+        Point2d p3 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
+        tr = new Triangle(p1, p2, p3);
+        DrawTriangle(tr);
     }
 }
