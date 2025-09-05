@@ -11,7 +11,7 @@ namespace _1labaprogi
         private int X;
         private int Y;
 
-        public void Ponint2d(int x, int y)
+        public Point2d(int x, int y)
         {
             this.X = x;
             this.Y = y; 
