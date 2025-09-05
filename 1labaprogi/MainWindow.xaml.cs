@@ -26,6 +26,7 @@ public partial class MainWindow : Window
         Point2d p2 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
         Point2d p3 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
         tr = new Triangle(p1, p2, p3);
+        DrawTriangle(tr);
     }
     public void DrawLine(Point2d p1, Point2d p2)
     {
@@ -37,16 +38,18 @@ public partial class MainWindow : Window
         line.Y1 = p1.getY();
         line.X2 = p2.getX();
         line.Y2 = p2.getY();
+        Scene.Children.Add(line);
+
     }
-    public void DrawTriangle(Triangle tr)
+     private void DrawTriangle(Triangle tr)
     {
         DrawLine(tr.getP1(), tr.getP2());
-        DrawLine(tr.getP1(), tr.getP3());
-        DrawLine(tr.getP3(), tr.getP2());
+        DrawLine(tr.getP2(), tr.getP3());
+        DrawLine(tr.getP3(), tr.getP1());
 
     }
     public void ClearScene()
     {
-        Scene.Childern.Clear();
+        Scene.Children.Clear();
     }
 }
