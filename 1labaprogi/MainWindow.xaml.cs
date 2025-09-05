@@ -18,6 +18,7 @@ namespace _1labaprogi;
 public partial class MainWindow : Window
 {
     Triangle tr;
+    Rectangle re;
     Random rnd = new Random();
     public MainWindow()
     {
@@ -44,6 +45,16 @@ public partial class MainWindow : Window
         DrawLine(tr.getP3(), tr.getP1());
 
     }
+
+    private void DrawRectangle(Rectangle re)
+    {
+        DrawLine(re.getP1(), re.getP2());
+        DrawLine(re.getP2(), re.getP4());
+        DrawLine(re.getP4(), re.getP3());
+        DrawLine(re.getP3(), re.getP1());
+    }
+
+
     public void ClearScene()
     {
         Scene.Children.Clear();
@@ -61,5 +72,54 @@ public partial class MainWindow : Window
         Point2d p3 = new Point2d(rnd.Next(0, (int)Scene.Width), rnd.Next(0, (int)Scene.Height));
         tr = new Triangle(p1, p2, p3);
         DrawTriangle(tr);
+    }
+
+    private void CreateRectangle_Click(object sender, RoutedEventArgs e)
+    {
+        int a = rnd.Next(0, (int)Scene.Width);
+        int b = rnd.Next(0, (int)Scene.Height);
+        int c = rnd.Next(0, (int)Scene.Width);
+        int d = rnd.Next(0, (int)Scene.Height);
+        Point2d p1 = new Point2d(a,b);
+        Point2d p2 = new Point2d(c,b);
+        Point2d p3 = new Point2d(a,d);
+        Point2d p4 = new Point2d(c,d);
+        re = new Rectangle(p1, p2, p3, p4);
+        DrawRectangle(re);
+    }
+
+    private void CreareSquare_Click(object sender, RoutedEventArgs e)
+    {
+        int sizeScene = Math.Min((int)Scene.Height, (int)Scene.Width);
+        int size = rnd.Next(0, sizeScene);
+
+
+        int a = rnd.Next(0, (int)Scene.Width - size);
+        int b = rnd.Next(0, (int)Scene.Height - size);
+
+        Point2d p1 = new Point2d(a, b);
+        Point2d p2 = new Point2d(a+size, b);
+        Point2d p3 = new Point2d(a,b+size);
+        Point2d p4 = new Point2d(a+size,b+size);
+        re = new Rectangle(p1, p2, p3, p4);
+        DrawRectangle(re);
+    }
+
+    private void SetСoordinates_Click(object sender, RoutedEventArgs e)
+    {
+        CreatingFigures form2 = new CreatingFigures(this);
+        form2.Show();
+    }
+
+
+    public void DrawSquareAtCoordinates(int a, int b, int size)
+    {
+        Point2d p1 = new Point2d(a, b);
+        Point2d p2 = new Point2d(a + size, b);
+        Point2d p3 = new Point2d(a, b + size);
+        Point2d p4 = new Point2d(a + size, b + size);
+
+        re = new Rectangle(p1, p2, p3, p4);
+        DrawRectangle(re);
     }
 }

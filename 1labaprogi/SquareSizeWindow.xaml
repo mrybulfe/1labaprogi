@@ -1,0 +1,29 @@
+﻿<Window x:Class="_1labaprogi.SquareSizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1labaprogi"
+        mc:Ignorable="d"
+        Title="SquareSizeWindow" Height="180" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Введите координату точки по X:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Введите координату точки по Y:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Задайте размер квадрата:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="square_point_coordinate_x"  Grid.Row="0" Grid.Column="2" Background="Aqua"/>
+        <TextBox x:Name="square_point_coordinate_y"  Grid.Row="1" Grid.Column="2" Background="Aqua"/>
+        <TextBox x:Name="square_size"  Grid.Row="2" Grid.Column="2" Background="Aqua"/>
+        <Button x:Name="FinishedSquare" Grid.Row="3" Grid.Column="1" Content="OK" Click="FinishedSquare_Click"/>
+    </Grid>
+</Window>

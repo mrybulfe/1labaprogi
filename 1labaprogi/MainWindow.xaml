@@ -13,11 +13,12 @@
             <RowDefinition/>
             </Grid.RowDefinitions>
         <StackPanel  Grid.Row="0" Orientation="Horizontal">
-            <Button x:Name="CreateTriangle" Content="Произвольный треугольник" FontSize="13" Height="125" Width="200" Click="CreateTriangle_Click"/>
-            <Button Content="Произвольный прямоугольник" FontSize="13" Height="125" Width="200" />
-            <Button Content="Квадрат" FontSize="13" Height="125" Width="200" />
-            <Button x:Name="ClearBordButton" Content="Отчистить доску" FontSize="13" Height="125" Width="200" Click="ClearBordButton_Click"/>
+            <Button x:Name="CreateTriangle" Content="Произвольный треугольник" FontSize="12" Height="125" Width="160" Click="CreateTriangle_Click"/>
+            <Button x:Name="CreateRectangle" Content="Произвольный прямоугольник" FontSize="10" Height="125" Width="160" Click="CreateRectangle_Click" />
+            <Button x:Name="CreareSquare" Content="Квадрат" FontSize="13" Height="125" Width="160" Click="CreareSquare_Click" />
+            <Button x:Name="ClearBordButton" Content="Отчистить доску" FontSize="13" Height="125" Width="160" Click="ClearBordButton_Click"/>
+            <Button x:Name="SetСoordinates" Content="Задать координаты" FontSize="13" Height="125" Width="160" Click="SetСoordinates_Click" />
         </StackPanel>
-                <Canvas x:Name="Scene" HorizontalAlignment="Left" Height="400" Margin="15,450,0,0" VerticalAlignment="Center" Width="770" />
+                <Canvas x:Name="Scene" HorizontalAlignment="Left" Height="400" Margin="15,450,0,0" VerticalAlignment="Center" Width="770" Background="Aqua"/>
     </Grid>
 </Window>
