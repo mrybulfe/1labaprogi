@@ -1,0 +1,45 @@
+﻿<Window x:Class="_1labaprogi.TriangleSizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1labaprogi"
+        mc:Ignorable="d"
+        Title="TriangleSizeWindow" Height="180" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="X1" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="X2" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="X3" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Y1" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="Y2" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="3" Grid.Column="2" Text="Y3" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Введите координаты трех точек" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="4" />
+        <TextBox x:Name="triangl_point1_coordinate_x"  Grid.Row="1" Grid.Column="1" Background="Aqua"/>
+        <TextBox x:Name="triangl_point2_coordinate_x"  Grid.Row="2" Grid.Column="1" Background="Aqua"/>
+        <TextBox x:Name="triangl_point3_coordinate_x"  Grid.Row="3" Grid.Column="1" Background="Aqua"/>
+
+        <TextBox x:Name="triangl_point1_coordinate_y"  Grid.Row="1" Grid.Column="3" Background="Aqua"/>
+        <TextBox x:Name="triangl_point2_coordinate_y"  Grid.Row="2" Grid.Column="3" Background="Aqua"/>
+        <TextBox x:Name="triangl_point3_coordinate_y"  Grid.Row="3" Grid.Column="3" Background="Aqua"/>
+
+
+        <Button x:Name="FinishedTriangle" Grid.Row="4" Grid.Column="1" Content="OK" Grid.ColumnSpan="2" Click="FinishedTriangle_Click"/>
+    </Grid>
+</Window>

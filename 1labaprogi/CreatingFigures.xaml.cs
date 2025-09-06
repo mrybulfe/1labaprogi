@@ -34,5 +34,12 @@ namespace _1labaprogi
             this.Close();
 
         }
+
+        private void CreateTriangleSize_Click(object sender, RoutedEventArgs e)
+        {
+            TriangleSizeWindow form2 = new TriangleSizeWindow(mainWindow);
+            form2.Show();
+            this.Close();
+        }
     }
 }

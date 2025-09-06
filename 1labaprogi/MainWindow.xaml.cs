@@ -182,4 +182,12 @@ public partial class MainWindow : Window
         re = new Rectangle(p1, p2, p3, p4);
         DrawRectangle(re);
     }
+    public void DrawTriangleAtCoordinates(int a,int b,int c,int d, int e, int f)
+    {
+        Point2d p1 = new Point2d(a,b);
+        Point2d p2 = new Point2d(c,d);
+        Point2d p3 = new Point2d(e,f);
+        tr = new Triangle(p1, p2, p3);
+        DrawTriangle(tr);
+    }
 }
