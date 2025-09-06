@@ -9,7 +9,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="125"/>
-            <RowDefinition Height="125"/>
+
+            <RowDefinition Height="62"/>
+            <RowDefinition Height="62"/>
+            
             <RowDefinition/>
             </Grid.RowDefinitions>
         <StackPanel  Grid.Row="0" Orientation="Horizontal">
@@ -20,5 +23,10 @@
             <Button x:Name="SetСoordinates" Content="Задать координаты" FontSize="13" Height="125" Width="160" Click="SetСoordinates_Click" />
         </StackPanel>
                 <Canvas x:Name="Scene" HorizontalAlignment="Left" Height="400" Margin="15,450,0,0" VerticalAlignment="Center" Width="770" Background="Aqua"/>
+        
+        <TextBlock Text="Сдвиг по X:" Grid.Row="1" FontSize="30" VerticalAlignment="Center" />
+        <TextBlock Text="Сдвиг по Y:" Grid.Row="2" FontSize="30" VerticalAlignment="Center" />
+        <Slider Grid.Row="1" Width="500" Margin="150,0,0,0" VerticalAlignment="Center" Name="XShift" Minimum="-770" Maximum="770" Value="0"/>
+        <Slider Grid.Row="2" Width="500" Margin="150,0,0,0" VerticalAlignment="Center" Name="YShift" Minimum="-400" Maximum="400" Value="0"/>
     </Grid>
 </Window>
