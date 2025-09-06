@@ -20,11 +20,71 @@ public partial class MainWindow : Window
     Triangle tr;
     Rectangle re;
     Random rnd = new Random();
+    //предыдущее значение слайдеров 
+    private int previousX = 0;
+    private int previousY = 0;
     public MainWindow()
     {
         InitializeComponent();
-        
+        XShift.ValueChanged += XShift_ValueChanged;
+        YShift.ValueChanged += YShift_ValueChanged;
+
     }
+    private void XShift_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        int newX = (int)e.NewValue;
+        int deltaX = newX - previousX;
+        previousX = newX;
+
+        if (tr != null)
+        {
+            tr.addX(deltaX);
+            RedrawTriangle();
+        }
+
+        if (re != null)
+        {
+            re.addX(deltaX);
+            RedrawRectangle();
+        }
+    }
+    private void YShift_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        int newY = (int)e.NewValue;
+        int deltaY = newY - previousY;
+        previousY = newY;
+
+        if (tr != null)
+        {
+            tr.addY(deltaY);
+            RedrawTriangle();
+        }
+
+        if (re != null)
+        {
+            re.addY(deltaY);
+            RedrawRectangle();
+        }
+    }
+
+
+
+    private void RedrawRectangle()
+    {
+        ClearScene();
+        DrawRectangle(re);
+    }
+    private void RedrawTriangle()
+    {
+        ClearScene();
+        DrawTriangle(tr);
+    }
+
+
+
+
+
+
     public void DrawLine(Point2d p1, Point2d p2)
     {
         Line line = new Line();

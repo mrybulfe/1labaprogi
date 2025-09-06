@@ -47,7 +47,7 @@ namespace _1labaprogi
             p1.addY(Y);
             p2.addY(Y);
             p3.addY(Y);
-            p4.addX(Y);
+            p4.addY(Y);
         }
     }
 }
