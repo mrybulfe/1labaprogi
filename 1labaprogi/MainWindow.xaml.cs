@@ -194,9 +194,12 @@ public partial class MainWindow : Window
     public void DrawRectangleAtCoordinates(int a,int b, int width, int height)
     {
         Point2d p1 = new Point2d(a, b);
-        Point2d p2 = new Point2d(a, b+height);
-        Point2d p3 = new Point2d(a+width, b+height);
-        Point2d p4 = new Point2d(a+width, b);
+        Point2d p2 = new Point2d(a + width, b);
+        Point2d p3 = new Point2d(a, b + height);
+        Point2d p4 = new Point2d(a + width, b + height);
+        
+        
+        
         re = new Rectangle(p1, p2, p3, p4);
         DrawRectangle(re);
     }
