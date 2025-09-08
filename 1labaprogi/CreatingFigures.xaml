@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel  Grid.Row="0" Orientation="Horizontal">
             <Button x:Name="CreateTriangleSize" Content="Треугольник" FontSize="12" Height="125" Width="150" Click="CreateTriangleSize_Click" />
-            <Button x:Name="CreateRectangleSize" Content="Прямоугольник" FontSize="10" Height="125" Width="150"  />
+            <Button x:Name="CreateRectangleSize" Content="Прямоугольник" FontSize="10" Height="125" Width="150" Click="CreateRectangleSize_Click"  />
             <Button x:Name="CreareSquareSize" Content="Квадрат" FontSize="13" Height="125" Width="150" Click="CreareSquareSize_Click"  />
         </StackPanel>
     </Grid>

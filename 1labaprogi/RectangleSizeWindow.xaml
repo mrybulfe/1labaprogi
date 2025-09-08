@@ -1,0 +1,33 @@
+﻿<Window x:Class="_1labaprogi.RectangleSizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1labaprogi"
+        mc:Ignorable="d"
+        Title="RectangleSizeWindow" Height="250" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Введите координату точки по X:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Введите координату точки по Y:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Задайте высоту прямоугольника:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Задайте ширину прямоугольника:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="rectangle_point_coordinate_x"  Grid.Row="0" Grid.Column="2" Background="Aqua"/>
+        <TextBox x:Name="rectangle_point_coordinate_y"  Grid.Row="1" Grid.Column="2" Background="Aqua"/>
+        <TextBox x:Name="rectangle_height"  Grid.Row="2" Grid.Column="2" Background="Aqua"/>
+        <TextBox x:Name="rectangle_width"  Grid.Row="3" Grid.Column="2" Background="Aqua"/>
+        <Button x:Name="FinishedRectangle" Grid.Row="4" Grid.Column="1" Content="OK" Click="FinishedRectangle_Click"/>
+    </Grid>
+</Window>

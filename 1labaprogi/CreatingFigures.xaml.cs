@@ -41,5 +41,12 @@ namespace _1labaprogi
             form2.Show();
             this.Close();
         }
+
+        private void CreateRectangleSize_Click(object sender, RoutedEventArgs e)
+        {
+            RectangleSizeWindow form4 = new RectangleSizeWindow(mainWindow);
+            form4.Show();
+            this.Close();
+        }
     }
 }
