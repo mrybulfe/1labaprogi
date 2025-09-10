@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _1labaprogi
 {
-    class Rectangle
+    public class Rectangle
     {
         private Point2d p1;
         private Point2d p2;

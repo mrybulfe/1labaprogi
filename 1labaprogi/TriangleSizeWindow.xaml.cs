@@ -34,7 +34,11 @@ namespace _1labaprogi
             int d = Convert.ToInt32(triangl_point2_coordinate_y.Text);
             int ee = Convert.ToInt32(triangl_point3_coordinate_x.Text);
             int f = Convert.ToInt32(triangl_point3_coordinate_y.Text);
-            mainWindow.DrawTriangleAtCoordinates(a, b, c, d, ee, f);
+            Point2d p1 = new Point2d(a,b);
+            Point2d p2 = new Point2d(c, d);
+            Point2d p3 = new Point2d(ee,f);
+            Triangle tr = new Triangle(p1, p2, p3);
+            mainWindow.DrawTriangle(tr);
             triangl_point1_coordinate_x.Clear();
             triangl_point1_coordinate_y.Clear();
             triangl_point2_coordinate_x.Clear();

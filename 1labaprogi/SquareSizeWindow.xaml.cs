@@ -34,7 +34,14 @@ namespace _1labaprogi
             int a = Convert.ToInt32(square_point_coordinate_x.Text);
             int b = Convert.ToInt32(square_point_coordinate_y.Text);
             int size = Convert.ToInt32(square_size.Text);
-            mainWindow.DrawSquareAtCoordinates(a, b, size);
+            Point2d p1 = new Point2d(a, b);
+            Point2d p2 = new Point2d(a + size, b);
+            Point2d p3 = new Point2d(a, b + size);
+            Point2d p4 = new Point2d(a + size, b + size);
+
+            re = new Rectangle(p1, p2, p3, p4);
+            mainWindow.DrawRectangle(re);
+
             square_point_coordinate_x.Clear();
             square_point_coordinate_y.Clear();
             square_size.Clear();

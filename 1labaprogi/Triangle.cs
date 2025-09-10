@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _1labaprogi
 {
-    class Triangle
+    public class Triangle
     {
         private Point2d p1;
         private Point2d p2;

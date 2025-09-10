@@ -32,7 +32,12 @@ namespace _1labaprogi
             int b = Convert.ToInt32(rectangle_point_coordinate_x.Text);
             int height = Convert.ToInt32(rectangle_height.Text);
             int width = Convert.ToInt32(rectangle_width.Text);
-            mainWindow.DrawRectangleAtCoordinates(a, b, width, height);
+            Point2d p1 = new Point2d(a, b);
+            Point2d p2 = new Point2d(a+ width, b);
+            Point2d p3 = new Point2d(a, b+height);
+            Point2d p4 = new Point2d(a+width,b+height);
+            Rectangle re = new Rectangle(p1, p2, p3, p4);
+            mainWindow.DrawRectangle(re);
             this.Close();
         }
     }
